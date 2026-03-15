@@ -7,8 +7,8 @@ on:
     branches:
       - master
 
-  schedule:
-    - cron:  '0 0 * * *'
+  schedule: 
+    - cron: '0 0 * * *'
 
 jobs:
 
@@ -34,7 +34,7 @@ jobs:
         git config --global user.name "Your Name"
         git am ../patches/*.patch
         sed -i 's/https:\/\/invidious.io\/donate\//\/donate/g' src/invidious/views/template.ecr
-        
+         
     - name: Login to Docker Hub
       uses: docker/login-action@v2
       with:
@@ -78,7 +78,7 @@ jobs:
     #         add_build_args=-Dapi_only
     #     platforms: linux/amd64,linux/arm64/v8
     #     push: true
-    #     tags: unixfox/invidious-custom:api-new-latest, unixfox/invidious-custom:api-new-build-${{ env.commitid }}
+    #     tags: vigarpast777/invidious-custom:api-new-latest, vigarpast777/invidious-custom:api-new-build-${{ env.commitid }}
 
     # - name: Build and push official crystal docker image
     #   id: docker_build
@@ -89,4 +89,4 @@ jobs:
     #         release=1
     #     file: ./Dockerfile
     #     push: true
-    #     tags: unixfox/invidious-custom:latest, unixfox/invidious-custom:build-${{ env.commitid }}
+    #     tags: vigarpast777/invidious-custom:latest, vigarpast777/invidious-custom:build-${{ env.commitid }}
