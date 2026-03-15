@@ -58,7 +58,7 @@ jobs:
             release=1
         platforms: linux/arm64/v8
         push: true
-        tags: unixfox/invidious-custom:new-latest, unixfox/invidious-custom:new-build-${{ env.commitid }}
+        tags: vigarpast777/invidious-custom:new-latest, vigarpast777/invidious-custom:new-build-${{ env.commitid }}
 
     # - name: patch invidious API repo
     #   run: |
